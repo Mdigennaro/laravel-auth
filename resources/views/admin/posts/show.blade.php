@@ -12,8 +12,8 @@
     </div>  
     <div class="btn-action">
 
-      <a href="{{route('admin.posts.index')}}" class="btn btn-info mr-2">Lista</a>
-      <a href="#" class="btn btn-warning">Modifica</a>
+      <a href="{{route('admin.posts.index')}}" class="btn btn-info mr-2">Torna alla lista</a>
+      <a href="{{route('admin.posts.edit', $post)}}" class="btn btn-warning">Modifica</a>
       
     </div>
 

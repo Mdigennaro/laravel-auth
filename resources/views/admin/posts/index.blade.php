@@ -24,7 +24,7 @@
               <a href="{{route('admin.posts.show', $post)}}" class="btn btn-primary">Apri</a>
             </td>
             <td>
-              <a href="#" class="btn btn-warning">Modifica</a>
+              <a href="{{route('admin.posts.edit', $post)}}" class="btn btn-warning">Modifica</a>
             </td>
             <td>
               <a href="#" class="btn btn-danger">Elimina</a>
