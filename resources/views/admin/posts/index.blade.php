@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -20,7 +20,15 @@
             <th scope="row">{{$post->id}}</th>
             <td>{{$post->title}}</td>
             <td>{{$post->content}}</td>
-            <td>xxx</td>
+            <td>
+              <a href="{{route('admin.posts.show', $post)}}" class="btn btn-primary">Apri</a>
+            </td>
+            <td>
+              <a href="#" class="btn btn-warning">Modifica</a>
+            </td>
+            <td>
+              <a href="#" class="btn btn-danger">Elimina</a>
+            </td>
           </tr>
         @endforeach
       </tbody>
