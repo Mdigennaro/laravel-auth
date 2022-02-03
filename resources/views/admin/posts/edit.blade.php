@@ -48,3 +48,7 @@
 
 </div>
 @endsection
+
+@section('title')
+ modifica post
+@endsection

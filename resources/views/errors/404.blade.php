@@ -7,3 +7,7 @@
       <p>{{$exception->getMessage()}}</p>
     </div>
 @endsection
+
+@section('title')
+ 404
+@endsection

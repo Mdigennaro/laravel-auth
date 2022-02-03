@@ -51,3 +51,7 @@
 </div>
 
 @endsection
+
+@section('title')
+ lista post
+@endsection
