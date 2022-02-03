@@ -51,7 +51,12 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
 
-        return view('admin.posts.show', $post);
+        if($post){
+            return view('admin.posts.show', compact('post'));
+        }
+
+        abort(404,'pagina non trovata');
+
     }
 
     /**
