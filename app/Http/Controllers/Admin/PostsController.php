@@ -38,6 +38,8 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate($this->validationForm(), $this->validationErrors());
+
         $data = $request->all(); 
 
         $new_post = new Post();
@@ -98,5 +100,22 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function validationForm(){
+        return[
+            'title'=>'required|max:50|min:2',
+            'content'=>'required|min:2'
+        ];
+    }
+
+    private function validationErrors(){
+        return[
+            'title.required'=>'Il titolo è obbligatorio',
+            'title.max'=>'Un titolo non può avere più di 50 caratteri',
+            'title.min'=>'Un titolo deve contere almeno due caratteri',
+            'content.required'=>'Devi scrivere qualcosa nel contenuto',
+            'content.min'=>'Bisogna inserire almeno 2 caratteri'
+        ];
     }
 }
