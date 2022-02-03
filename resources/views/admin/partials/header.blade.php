@@ -6,7 +6,8 @@
         </a>
 
         @auth
-        <a href="{{route('admin.posts.index')}}">Posts</a>
+        <a href="{{route('admin.posts.index')}}" class="mr-2">Posts</a>
+        <a href="{{route('admin.posts.create')}}">Crea un nuovo post</a>
         @endauth
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
